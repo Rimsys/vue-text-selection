@@ -107,12 +107,14 @@
         show2: true
       },
       methods: {
-        getSelection1: function (fixStr, allStr) {
+        getSelection1: function (fixStr, allStr, event = null) {
+          console.log({event})
           console.log('%c fixStr1: \n%c' + fixStr, 'background:red;color:white', 'background:#aaa;color:white')
           console.log('%c allStr1: \n%c' + allStr, 'background:red;color:white', 'background:#aaa;color:white')
           this.fixStr1 = fixStr
         },
-        getSelection2: function (fixStr, allStr) {
+        getSelection2: function (fixStr, allStr, event) {
+          console.log({event})
           console.log('%c fixStr2: \n%c' + fixStr, 'background:red;color:white', 'background:#aaa;color:white')
           console.log('%c allStr2: \n%c' + allStr, 'background:red;color:white', 'background:#aaa;color:white')
           this.fixStr2 = fixStr
