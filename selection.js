@@ -5,13 +5,13 @@ const vueSelection = {
     /**
      * handle mouseup event on body
      */
-    function handleMouseUp() {
+    function handleMouseUp(event) {
       if (!el.parentElement) {
         document.body.removeEventListener('mouseup', handleMouseUp)
         return
       }
       var rtn = handleRange()
-      rtn.fixStr && binding.value.getSelection && binding.value.getSelection(rtn.fixStr, rtn.allStr)
+      rtn.fixStr && binding.value.getSelection && binding.value.getSelection(rtn.fixStr, rtn.allStr, event)
     }
     /**
      * handle range fix
